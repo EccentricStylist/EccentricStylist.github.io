@@ -2,7 +2,7 @@
     "name": "eccentric-stylist",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://EccentricStylist.github.io/eccentric-stylist",
+    "homepage": "https://EccentricStylist.github.io/",
     "dependencies": {
       "react": "^18.2.0",
       "react-dom": "^18.2.0",
