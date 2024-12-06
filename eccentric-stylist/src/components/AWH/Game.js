@@ -31,7 +31,7 @@ function AWHGame() {
           <div
             className="absolute inset-0 z-20 pointer-events-none"
             style={{
-              backgroundImage: `url('/images/awh-frame.png')`, // Replace with your frame image path
+              backgroundImage: `url('/images/AWH/awh-frame.png')`, // Replace with your frame image path
               backgroundSize: "100% 100%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",

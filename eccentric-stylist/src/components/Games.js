@@ -9,7 +9,7 @@ function Games() {
         <Link to="/games/a-winter-haunting" className="block">
           <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <img 
-              src="/images/awh-banner.png" 
+              src="/images/AWH/awh-banner.png" 
               alt="A Winter Haunting - A spooky winter adventure game" 
               className="w-full h-48 object-cover"
             />

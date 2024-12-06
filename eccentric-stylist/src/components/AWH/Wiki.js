@@ -26,7 +26,7 @@ function AWHWiki() {
             {/* Embed PDF with iframe */}
             <div className="relative w-full" style={{ height: "80vh" }}>
               <iframe
-                src="/images/awh-walkthrough.pdf"
+                src="/images/AWH/awh-walkthrough.pdf"
                 width="100%"
                 height="100%"
                 frameBorder="0"
