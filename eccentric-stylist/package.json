@@ -4,6 +4,9 @@
     "private": true,
     "homepage": "https://EccentricStylist.github.io/",
     "dependencies": {
+        "@react-pdf-viewer/core": "^3.12.0",
+        "@react-pdf-viewer/default-layout": "^3.12.0",
+        "@react-pdf/renderer": "^4.1.5",
         "@tailwindcss/aspect-ratio": "^0.4.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",

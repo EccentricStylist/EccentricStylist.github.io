@@ -15,8 +15,11 @@ function AWinterHaunting() {
     // <div className="min-h-screen w-full bg-white">
     <div
     className="min-h-screen w-full"
-    style={{ backgroundColor: '#d9faf8' }} // Custom dark blue color
-    // style={{ backgroundColor: '#103622' }} 
+    style={{ backgroundColor: '#d9faf8',
+        backgroundImage: `url('/images/awh-background.png')`, 
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover" 
+     }}
   >
       {/* Sub Navigation Bar */}
       <nav className="bg-gray-900 text-white shadow-lg w-full">
@@ -47,7 +50,7 @@ function AWinterHaunting() {
             Embark on a chilling journey through a snow-covered landscape...
           </p> */}
           {/* <img
-            src="/images/awh-banner.png"
+            src="/images/awh-logo.png"
             alt="A Winter Haunting"
             className="mx-auto rounded-lg shadow-lg"
           /> */}

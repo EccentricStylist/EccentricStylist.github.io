@@ -2,9 +2,9 @@ import React from "react";
 
 function AWHGame() {
   return (
-    <div className="max-w-4xl mx-auto py-12 px-6 bg-[#d9faf8] text-gray-900 rounded-lg">
+    <div className="max-w-4xl mx-auto py-12 px-6 bg-white bg-opacity-85 text-gray-900 rounded-lg shadow-lg">
       {/* Title */}
-      <h1 className="text-4xl font-bold text-center mb-6">A Winter Haunting</h1>
+      <h1 className="text-6xl font-bold text-center mb-6">A Winter Haunting</h1>
 
       {/* Pitch */}
       <section className="mb-10">
@@ -23,9 +23,9 @@ function AWHGame() {
       {/* YouTube Video */}
 
       <section className="mb-10">
-  <h2 className="text-2xl font-semibold mb-4 text-center">
+  {/* <h2 className="text-2xl font-semibold mb-4 text-center">
     Watch the Trailer
-  </h2>
+  </h2> */}
   <div className="relative max-w-4xl mx-auto aspect-w-16 aspect-h-9">
     {/* Decorative Frame */}
     <div
