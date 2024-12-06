@@ -23,36 +23,38 @@ function AWHGame() {
       {/* YouTube Video */}
 
       <section className="mb-10">
-  {/* <h2 className="text-2xl font-semibold mb-4 text-center">
+        {/* <h2 className="text-2xl font-semibold mb-4 text-center">
     Watch the Trailer
   </h2> */}
-  <div className="relative max-w-4xl mx-auto aspect-w-16 aspect-h-9">
-    {/* Decorative Frame */}
-    <div
-      className="absolute inset-0 z-20 pointer-events-none"
-      style={{
-        backgroundImage: `url('/images/awh-frame.png')`, // Replace with your frame image path
-        backgroundSize: "100% 100%",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
-    ></div>
+        <div className="relative max-w-4xl mx-auto aspect-w-16 aspect-h-9">
+          {/* Decorative Frame */}
+          <div
+            className="absolute inset-0 z-20 pointer-events-none"
+            style={{
+              backgroundImage: `url('/images/awh-frame.png')`, // Replace with your frame image path
+              backgroundSize: "100% 100%",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+          ></div>
 
-    {/* Video */}
-    <div className="absolute inset-0 z-10 flex items-center justify-center">
-      <div className="w-4/5 h-4/5"> {/* Adjust width and height to control video size */}
-        <iframe
-          className="w-full h-full rounded-lg"
-          src="https://www.youtube.com/embed/lomCpoNHyEY"
-          title="A Winter Haunting - Official Trailer"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-</section>
+          {/* Video */}
+          <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <div className="w-4/5 h-4/5">
+              {" "}
+              {/* Adjust width and height to control video size */}
+              <iframe
+                className="w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/lomCpoNHyEY"
+                title="A Winter Haunting - Official Trailer"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Features */}
       <section className="mb-10">
@@ -82,9 +84,15 @@ function AWHGame() {
             Are you ready to uncover the secrets of Lunabelle Manor?
           </strong>
         </p>
-        <button className="mt-4 bg-pink-500 text-white py-2 px-6 rounded-lg hover:bg-pink-600 transition duration-300">
-          Play Now
-        </button>
+        <a
+          href="https://store.steampowered.com/app/2790100/A_Winter_Haunting/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="mt-4 bg-pink-500 text-white py-2 px-6 rounded-lg hover:bg-pink-600 transition duration-300">
+            Play Now
+          </button>
+        </a>
       </section>
     </div>
   );
