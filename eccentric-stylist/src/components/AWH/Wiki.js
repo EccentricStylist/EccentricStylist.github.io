@@ -1,7 +1,7 @@
 import React from "react";
 
 function AWHWiki() {
-  const [activeTab, setActiveTab] = React.useState("characters");
+  const [activeTab, setActiveTab] = React.useState("setting");
 
   const renderTabContent = () => {
     switch (activeTab) {
