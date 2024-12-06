@@ -2,7 +2,7 @@ import React from "react";
 
 function AWHGame() {
   return (
-    <div className="max-w-4xl mx-auto py-12 px-6 bg-white text-gray-800 rounded-lg shadow-md">
+    <div className="max-w-4xl mx-auto py-12 px-6 bg-[#d9faf8] text-gray-900 rounded-lg">
       {/* Title */}
       <h1 className="text-4xl font-bold text-center mb-6">A Winter Haunting</h1>
 
@@ -53,9 +53,6 @@ function AWHGame() {
     </div>
   </div>
 </section>
-
-
-
 
       {/* Features */}
       <section className="mb-10">
