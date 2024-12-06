@@ -15,22 +15,13 @@ function AWinterHaunting() {
 
   useEffect(() => {
     const snowflake1 = new Image();
-    snowflake1.src = "/images/AWH/cooling-con.png";
+    snowflake1.src = "/images/AWH/cooling-icon.png";
 
     const snowflake2 = new Image();
     snowflake2.src = "/images/AWH/snowflake-icon.png";
 
-    console.log("Starting to load images...");
-
-    snowflake1.onload = () => {
-      console.log("Snowflake 1 loaded successfully.");
-      setImages((prev) => [...prev, snowflake1]);
-    };
-
-    snowflake2.onload = () => {
-      console.log("Snowflake 2 loaded successfully.");
-      setImages((prev) => [...prev, snowflake2]);
-    };
+    snowflake1.onload = () => setImages((prev) => [...prev, snowflake1]);
+    snowflake2.onload = () => setImages((prev) => [...prev, snowflake2]);
 
     snowflake1.onerror = () => console.error("Failed to load Snowflake 1.");
     snowflake2.onerror = () => console.error("Failed to load Snowflake 2.");
@@ -44,30 +35,32 @@ function AWinterHaunting() {
         backgroundImage: `url('/images/AWH/awh-background.png')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        position: "relative", // Ensure stacking context for z-index
       }}
     >
-      {console.log("Images array:", images)}
-
-      {/* Render Snowfall only if images are loaded */}
+      {/* Snowfall Layer */}
       {images.length > 0 && (
-        <Snowfall
-          snowflakeCount={25}
-          images={images}
-          radius={[5, 20]} // Randomized radius range (10px to 30px)
+        <div
           style={{
-            position: "fixed",
+            position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
             height: "100%",
-            zIndex: 0,
-            pointerEvents: "none",
+            zIndex: 0, // Above the background but below content
+            pointerEvents: "none", // Allow interactions with content
           }}
-        />
+        >
+          <Snowfall
+            snowflakeCount={12}
+            images={images}
+            radius={[5, 20]} // Randomized radius range
+          />
+        </div>
       )}
 
       {/* Sub Navigation Bar */}
-      <nav className="bg-gray-900 text-white shadow-lg w-full">
+      <nav className="bg-gray-900 text-white shadow-lg w-full" style={{ zIndex: 1 }}>
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-8 h-16">
             {navItems.map((item) => (
@@ -88,11 +81,10 @@ function AWinterHaunting() {
       </nav>
 
       {/* Main Content */}
-      <div className="h-full">
+      <div className="h-full" style={{ zIndex: 1 }}>
         <div className="px-4 py-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
-          {/* Content Goes Here */}
+          <Outlet />
         </div>
-        <Outlet />
       </div>
     </div>
   );

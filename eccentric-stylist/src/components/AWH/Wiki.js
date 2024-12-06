@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaBuildingColumns } from "react-icons/fa6";
 function AWHWiki() {
   const [activeTab, setActiveTab] = React.useState("setting");
 
@@ -8,8 +8,14 @@ function AWHWiki() {
       case "setting":
         return (
           <section>
-            <h2 className="text-3xl font-semibold mb-4">Setting</h2>
-            <p>Game setting details go here.</p>
+            <h2 className="text-3xl font-semibold mb-4 text-center">The Haunted Mansion</h2>
+            <div className="flex justify-center">
+              <img
+                src="/images/AWH/pacifica-map.png"
+                alt="Pacifica Map"
+                // className="rounded-lg shadow-lg max-w-full h-auto"
+              />
+            </div>
           </section>
         );
       case "characters":

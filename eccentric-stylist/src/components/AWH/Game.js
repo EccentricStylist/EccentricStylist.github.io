@@ -2,7 +2,8 @@ import React from "react";
 
 function AWHGame() {
   return (
-    <div className="max-w-4xl mx-auto py-12 px-6 bg-white bg-opacity-85 text-gray-900 rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto py-12 px-6 bg-white bg-opacity-85 text-gray-900 rounded-lg shadow-lg"
+    style={{ zIndex: 2, position: "relative" }}>
       {/* Title */}
       <h1 className="text-6xl font-bold text-center mb-6">A Winter Haunting</h1>
 
