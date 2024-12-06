@@ -41,11 +41,11 @@ function AWinterHaunting() {
           <p className="text-lg mb-4">
             Embark on a chilling journey through a snow-covered landscape...
           </p>
-          <img
-            src="/a-winter-haunting-banner.png"
+          {/* <img
+            src="/images/awh-banner.png"
             alt="A Winter Haunting"
             className="mx-auto rounded-lg shadow-lg"
-          />
+          /> */}
         </div>
         <Outlet />
       </div>

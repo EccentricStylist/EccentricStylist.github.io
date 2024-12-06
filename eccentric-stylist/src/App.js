@@ -5,8 +5,9 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
 import Games from './components/Games';
-import AWinterHaunting from './components/AWinterHaunting';
-import Wiki from './components/Wiki';
+import AWinterHaunting from './components/AWH/AWinterHaunting';
+import AWHWiki from './components/AWH/Wiki'; 
+import AWHGame from './components/AWH/Game'; 
 
 // Placeholder components for A Winter Haunting sub-pages
 const Developer = () => <h2>Developer Information</h2>;
@@ -24,8 +25,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="games" element={<Games />} />
           <Route path="games/a-winter-haunting" element={<AWinterHaunting />}>
-            <Route index element={<h2>Game Overview</h2>} />
-            <Route path="wiki" element={<Wiki />} />
+            <Route index element={<AWHGame />} />
+            <Route path="wiki" element={<AWHWiki />} />
             <Route path="developer" element={<Developer />} />
             <Route path="press" element={<Press />} />
             <Route path="media" element={<Media />} />
