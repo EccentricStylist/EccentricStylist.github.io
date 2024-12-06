@@ -1,5 +1,7 @@
 import React from "react";
-import { FaBuildingColumns } from "react-icons/fa6";
+import { IoMdClock } from "react-icons/io";
+import CharacterViewer from "./CharacterViewer";
+
 function AWHWiki() {
   const [activeTab, setActiveTab] = React.useState("setting");
 
@@ -8,7 +10,9 @@ function AWHWiki() {
       case "setting":
         return (
           <section>
-            <h2 className="text-3xl font-semibold mb-4 text-center">The Haunted Mansion</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-center">
+              The Haunted Mansion
+            </h2>
             <div className="flex justify-center">
               <img
                 src="/images/AWH/pacifica-map.png"
@@ -16,15 +20,14 @@ function AWHWiki() {
                 // className="rounded-lg shadow-lg max-w-full h-auto"
               />
             </div>
+            <h2 className="text-2xl font-semibold mb-4 text-center flex items-center justify-center space-x-2">
+              <IoMdClock />
+              <span>Present Day | 1950s-1960s</span>
+            </h2>
           </section>
         );
       case "characters":
-        return (
-          <section>
-            <h2 className="text-3xl font-semibold mb-4">Characters</h2>
-            <p>Character details go here.</p>
-          </section>
-        );
+        return <CharacterViewer />;
       case "walkthrough":
         return (
           <section>
