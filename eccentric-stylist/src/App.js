@@ -6,9 +6,9 @@ import Contact from './components/Contact';
 import About from './components/About';
 import Games from './components/Games';
 import AWinterHaunting from './components/AWinterHaunting';
+import Wiki from './components/Wiki';
 
 // Placeholder components for A Winter Haunting sub-pages
-const Wiki = () => <h2>Wiki Content</h2>;
 const Developer = () => <h2>Developer Information</h2>;
 const Press = () => <h2>Press Information</h2>;
 const Media = () => <h2>Media Gallery</h2>;

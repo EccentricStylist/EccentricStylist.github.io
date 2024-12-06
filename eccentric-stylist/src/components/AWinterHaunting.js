@@ -12,10 +12,10 @@ function AWinterHaunting() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen w-full bg-white">
       {/* Sub Navigation Bar */}
-      <nav className="bg-gray-900 text-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="bg-gray-900 text-white shadow-lg w-full">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-8 h-16">
             {navItems.map((item) => (
               <Link
@@ -35,8 +35,8 @@ function AWinterHaunting() {
       </nav>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0">
+      <div className="w-full">
+        <div className="px-4 py-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold mb-4">A Winter Haunting</h1>
           <p className="text-lg mb-4">
             Embark on a chilling journey through a snow-covered landscape...

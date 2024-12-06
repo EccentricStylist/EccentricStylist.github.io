@@ -10,7 +10,7 @@ function Layout() {
   const isAWinterHaunting = location.pathname.startsWith('/games/a-winter-haunting');
 
   return (
-    <div className={`${isAWinterHaunting ? 'bg-white' : 'bg-gray-900'} min-h-screen text-gray-300`}>
+    <div className={`min-h-screen ${isAWinterHaunting ? 'bg-white' : 'bg-gray-900'} text-gray-300`}>
       {/* Top Navigation Bar: Render only if not on "A Winter Haunting" */}
       {!isAWinterHaunting && (
         <nav className="bg-gray-800 shadow-lg">
@@ -128,7 +128,7 @@ function Layout() {
       )}
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto mt-6 px-4">
+      <main className={`${isAWinterHaunting ? 'w-full' : 'max-w-6xl mx-auto mt-6 px-4'}`}>
         <Outlet />
       </main>
     </div>
