@@ -59,7 +59,7 @@ function CharacterViewer() {
         />
 
         {/* Character Details */}
-        <div className="max-w-[60%] text-left">
+        <div className="max-w-[60%] text-left overflow-y-auto h-[calc(100vh-50px)]"> {/* Make the container scrollable */}
           {/* Character Name */}
           <h1 className="text-4xl font-bold mb-4 text-center">
             {currentCharacter.name}
