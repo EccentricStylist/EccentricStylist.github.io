@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { characters } from "./Variables"; // Import the `characters` array
+import Spoiler from '../Spoiler'
 
 function CharacterViewer() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,6 +16,14 @@ function CharacterViewer() {
   };
 
   const currentCharacter = characters[currentIndex];
+
+  // Helper to check for spoilers
+  const renderTextWithSpoilers = (text) => {
+    if (text.startsWith("*") && text.endsWith("*")) {
+      return <Spoiler text={text.slice(1, -1)} />; // Remove *s and render as spoiler
+    }
+    return text;
+  };
 
   return (
     <section
@@ -62,18 +71,18 @@ function CharacterViewer() {
             {currentCharacter.relatives.map((relative, index) => (
               <li key={index} className="flex items-center">
                 <span className="text-black mr-2">❄</span>
-                {relative}
+                {renderTextWithSpoilers(relative)}
               </li>
             ))}
           </ul>
 
           {/* Friends */}
-          <h2 className="text-xl font-semibold mt-4">Friends:</h2>
+          <h2 className="text-xl font-semibold mt-4">Allies:</h2>
           <ul className="list-none space-y-1 text-lg">
             {currentCharacter.friends.map((friend, index) => (
               <li key={index} className="flex items-center">
                 <span className="text-black mr-2">★</span>
-                {friend}
+                {renderTextWithSpoilers(friend)}
               </li>
             ))}
           </ul>
@@ -84,7 +93,7 @@ function CharacterViewer() {
             {currentCharacter.enemies.map((enemy, index) => (
               <li key={index} className="flex items-center">
                 <span className="text-black mr-2">▲</span>
-                {enemy}
+                {renderTextWithSpoilers(enemy)}
               </li>
             ))}
           </ul>

@@ -29,13 +29,12 @@ function AWinterHaunting() {
 
   return (
     <div
-      className="min-h-screen w-full"
+      className="flex flex-col min-h-screen w-full"
       style={{
         backgroundColor: "#d9faf8",
         backgroundImage: `url('/images/AWH/awh-background.png')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        position: "relative", // Ensure stacking context for z-index
       }}
     >
       {/* Snowfall Layer */}
@@ -60,7 +59,10 @@ function AWinterHaunting() {
       )}
 
       {/* Sub Navigation Bar */}
-      <nav className="bg-gray-900 text-white shadow-lg w-full" style={{ zIndex: 1 }}>
+      <nav
+        className="bg-gray-900 text-white shadow-lg w-full"
+        style={{ zIndex: 1 }}
+      >
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-8 h-16">
             {navItems.map((item) => (
@@ -81,11 +83,32 @@ function AWinterHaunting() {
       </nav>
 
       {/* Main Content */}
-      <div className="h-full" style={{ zIndex: 1 }}>
+      <div
+        className="flex-grow"
+        style={{
+          zIndex: 1,
+        }}
+      >
         <div className="px-4 py-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
           <Outlet />
         </div>
       </div>
+
+      {/* Footer */}
+      <footer
+        className="w-full text-center text-white py-8 flex-shrink-0"
+        style={{
+          backgroundImage: `url('/images/AWH/footer-background.png')`, // Replace with your chosen footer background image
+          backgroundSize: "cover", // Ensure the background image fills the area
+          backgroundRepeat: "no-repeat", // Prevent tiling
+        //   backgroundPosition: "center -20px", // Center horizontally and move up by 20px
+          minHeight: "150px", // Ensure a minimum height for the footer
+          zIndex: 10, // Ensure footer is above other elements
+          overflow: "visible", // Allow background image overflow to be visible
+        }}
+      >
+        <p className="text-sm font-medium mt-2">© 2024 Eccentric Stylist</p>
+      </footer>
     </div>
   );
 }
