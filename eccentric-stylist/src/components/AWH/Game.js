@@ -3,11 +3,23 @@ import React from "react";
 function AWHGame() {
   return (
     <div
-      className="max-w-4xl mx-auto py-12 px-6 bg-white bg-opacity-85 text-gray-900 rounded-lg shadow-lg"
+      className="max-w-4xl mx-auto py-6 px-4 bg-white bg-opacity-85 text-gray-900 rounded-lg shadow-lg" // Reduced padding
       style={{ zIndex: 2, position: "relative" }}
     >
-      {/* Title */}
-      <h1 className="text-6xl font-bold text-center mb-6">A Winter Haunting</h1>
+      {/* Logo Image as Title */}
+      <div className="text-center mb-6">
+        <img
+          src="/images/AWH/awh-logo.png" // Logo image path
+          alt="A Winter Haunting Logo"
+          className="mx-auto"
+          style={{
+            maxWidth: "90%", // Controls the width of the logo
+            height: "auto",  // Maintains aspect ratio
+            maxHeight: "250px", // Increases max height to make the logo bigger
+            objectFit: "contain", // Ensures the logo fits within the bounds
+          }}
+        />
+      </div>
 
       {/* YouTube Video */}
       <section className="mb-10">
@@ -38,26 +50,6 @@ function AWHGame() {
           </div>
         </div>
       </section>
-
-      {/* Features */}
-      {/* <section
-        className="mb-10 p-16 text-black min-h-[500px] flex flex-col justify-center"
-        style={{
-          backgroundImage: "url('/images/AWH/awh-web-border.png')",
-          backgroundSize: "110%", // Adjust the background size
-          backgroundPosition: "center 40%", // Adjust the vertical positioning
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "scroll",
-        }}
-      >
-        <h2 className="text-2xl font-semibold mb-4">Game Features</h2>
-        <ul className="list-disc list-inside text-lg">
-          <li>Explore the eerie Lunabelle Manor and uncover its dark secrets.</li>
-          <li>Solve puzzles and navigate through a dynamic, haunted environment.</li>
-          <li>Experience a heartwarming yet chilling narrative about love, loss, and redemption.</li>
-          <li>Interact with unique characters, including spirits tied to the manor’s history.</li>
-        </ul>
-      </section> */}
 
       {/* Steam Buy Widget */}
       <section className="mb-10 text-center">
