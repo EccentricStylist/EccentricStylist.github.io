@@ -9,32 +9,14 @@ function AWHGame() {
       {/* Title */}
       <h1 className="text-6xl font-bold text-center mb-6">A Winter Haunting</h1>
 
-      {/* Pitch */}
-      <section className="mb-10">
-        <p className="text-lg text-center">
-          <strong>Step into the shoes of Everlyn Sterling</strong>, a new grad
-          undertaking a temp job in a small town in dead winter. She expected
-          this week to be one of solitude—a break from the fast-paced nature of
-          job-hunting.
-        </p>
-        <p className="mt-4 text-lg text-center">
-          Little does she know this seemingly ordinary task will soon unveil a
-          mysterious tale of a disturbed spirit.
-        </p>
-      </section>
-
       {/* YouTube Video */}
-
       <section className="mb-10">
-        {/* <h2 className="text-2xl font-semibold mb-4 text-center">
-    Watch the Trailer
-  </h2> */}
         <div className="relative max-w-4xl mx-auto aspect-w-16 aspect-h-9">
           {/* Decorative Frame */}
           <div
             className="absolute inset-0 z-20 pointer-events-none"
             style={{
-              backgroundImage: `url('/images/AWH/awh-frame.png')`, // Replace with your frame image path
+              backgroundImage: "url('/images/AWH/awh-frame.png')", // Frame image
               backgroundSize: "100% 100%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -44,8 +26,6 @@ function AWHGame() {
           {/* Video */}
           <div className="absolute inset-0 z-10 flex items-center justify-center">
             <div className="w-4/5 h-4/5">
-              {" "}
-              {/* Adjust width and height to control video size */}
               <iframe
                 className="w-full h-full rounded-lg"
                 src="https://www.youtube.com/embed/lomCpoNHyEY"
@@ -60,44 +40,48 @@ function AWHGame() {
       </section>
 
       {/* Features */}
-      <section
-  className="mb-10 p-16 text-black min-h-[500px] flex flex-col justify-center"
-  style={{
-    backgroundImage: "url('/images/AWH/awh-web-border.png')",
-    backgroundSize: "110%", // Adjust the background size
-    backgroundPosition: "center 40%",  // Adjust the vertical positioning
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "scroll",
-  }}
->
-  <h2 className="text-2xl font-semibold mb-4">Game Features</h2>
-  <ul className="list-disc list-inside text-lg">
-    <li>Explore the eerie Lunabelle Manor and uncover its dark secrets.</li>
-    <li>Solve puzzles and navigate through a dynamic, haunted environment.</li>
-    <li>Experience a heartwarming yet chilling narrative about love, loss, and redemption.</li>
-    <li>Interact with unique characters, including spirits tied to the manor’s history.</li>
-  </ul>
-</section>
+      {/* <section
+        className="mb-10 p-16 text-black min-h-[500px] flex flex-col justify-center"
+        style={{
+          backgroundImage: "url('/images/AWH/awh-web-border.png')",
+          backgroundSize: "110%", // Adjust the background size
+          backgroundPosition: "center 40%", // Adjust the vertical positioning
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "scroll",
+        }}
+      >
+        <h2 className="text-2xl font-semibold mb-4">Game Features</h2>
+        <ul className="list-disc list-inside text-lg">
+          <li>Explore the eerie Lunabelle Manor and uncover its dark secrets.</li>
+          <li>Solve puzzles and navigate through a dynamic, haunted environment.</li>
+          <li>Experience a heartwarming yet chilling narrative about love, loss, and redemption.</li>
+          <li>Interact with unique characters, including spirits tied to the manor’s history.</li>
+        </ul>
+      </section> */}
 
-
-
-
-      {/* Call to Action */}
-      <section className="text-center">
-        <p className="text-lg">
-          <strong>
-            Are you ready to uncover the secrets of Lunabelle Manor?
-          </strong>
-        </p>
-        <a
-          href="https://store.steampowered.com/app/2790100/A_Winter_Haunting/"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* Steam Buy Widget */}
+      <section className="mb-10 text-center">
+        <div
+          className="relative"
+          style={{
+            width: "100%",
+            maxWidth: "640px", // You can adjust the size here
+            margin: "0 auto",
+          }}
         >
-          <button className="mt-4 bg-pink-500 text-white py-2 px-6 rounded-lg hover:bg-pink-600 transition duration-300">
-            Play Now
-          </button>
-        </a>
+          <iframe
+            src="https://store.steampowered.com/widget/2790100/"
+            width="100%"
+            height="200px"
+            frameBorder="0"
+            style={{
+              border: "none",
+              overflow: "hidden",
+              borderRadius: "10px", // Optional: adds rounded corners to iframe
+            }}
+            title="A Winter Haunting Buy Widget"
+          ></iframe>
+        </div>
       </section>
     </div>
   );
