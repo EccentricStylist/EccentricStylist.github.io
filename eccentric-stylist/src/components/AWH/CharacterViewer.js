@@ -50,16 +50,16 @@ function CharacterViewer() {
       </button>
 
       {/* Character Display */}
-      <div className="p-6 flex items-center space-x-6 h-full justify-center mx-auto max-w-5xl">
+      <div className="p-6 flex flex-col lg:flex-row items-center space-y-6 lg:space-x-6 h-full justify-center mx-auto max-w-5xl">
         {/* Character Image */}
         <img
           src={currentCharacter.image}
           alt={currentCharacter.name}
-          className="w-48 h-auto rounded-lg flex-shrink-0"
+          className="w-1/3 sm:w-20 lg:w-48 h-auto min-w-[4rem] max-w-full rounded-lg flex-shrink-0 mb-4 lg:mb-0" // Shrinks to 20% on small devices and 1/3 on larger
         />
 
         {/* Character Details */}
-        <div className="max-w-[60%] text-left overflow-y-auto h-[calc(100vh-50px)]"> {/* Make the container scrollable */}
+        <div className="max-w-full sm:max-w-[60%] text-left overflow-y-auto h-[calc(100vh-50px)]">
           {/* Character Name */}
           <h1 className="text-4xl font-bold mb-4 text-center">
             {currentCharacter.name}
