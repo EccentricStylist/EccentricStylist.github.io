@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Change BrowserRouter to HashRouter
 import Layout from './components/Layout';
 import Home from './components/Home';
 import Contact from './components/Contact';
@@ -16,7 +16,7 @@ const GameContact = () => <h2>Game-specific Contact Information</h2>;
 
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="/"> {/* HashRouter doesn't need basename */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
