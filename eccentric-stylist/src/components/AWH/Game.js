@@ -13,7 +13,7 @@ function AWHGame() {
           alt="A Winter Haunting Logo"
           className="mx-auto"
           style={{
-            maxWidth: "90%", // Controls the width of the logo
+            maxWidth: "50%", // Controls the width of the logo
             height: "auto",  // Maintains aspect ratio
             maxHeight: "250px", // Increases max height to make the logo bigger
             objectFit: "contain", // Ensures the logo fits within the bounds
