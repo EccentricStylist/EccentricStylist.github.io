@@ -10,7 +10,6 @@ import AWHWiki from './components/AWH/Wiki';
 import AWHGame from './components/AWH/Game'; 
 
 // Placeholder components for A Winter Haunting sub-pages
-const Developer = () => <h2>Developer Information</h2>;
 const Press = () => <h2>Press Information</h2>;
 const Media = () => <h2>Media Gallery</h2>;
 const GameContact = () => <h2>Game-specific Contact Information</h2>;
@@ -27,7 +26,6 @@ function App() {
           <Route path="games/a-winter-haunting" element={<AWinterHaunting />}>
             <Route index element={<AWHGame />} />
             <Route path="wiki" element={<AWHWiki />} />
-            <Route path="developer" element={<Developer />} />
             <Route path="press" element={<Press />} />
             <Route path="media" element={<Media />} />
             <Route path="contact" element={<GameContact />} />
