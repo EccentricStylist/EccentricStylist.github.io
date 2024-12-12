@@ -71,8 +71,8 @@ function AWinterHaunting() {
                 to={item.path}
                 className={`${
                   location.pathname === item.path
-                    ? "border-b-2 border-pink-500 text-white"
-                    : "text-gray-400 hover:text-pink-500"
+                    ? "border-b-2 border-blue-300 text-white"  // Change active color to light blue
+                    : "text-gray-400 hover:text-blue-300"    // Change hover color to light blue
                 } inline-flex items-center px-1 pt-1 text-sm font-medium`}
               >
                 {item.name}
@@ -101,7 +101,6 @@ function AWinterHaunting() {
           backgroundImage: `url('/images/AWH/footer-background.png')`, // Replace with your chosen footer background image
           backgroundSize: "cover", // Ensure the background image fills the area
           backgroundRepeat: "no-repeat", // Prevent tiling
-        //   backgroundPosition: "center -20px", // Center horizontally and move up by 20px
           minHeight: "150px", // Ensure a minimum height for the footer
           zIndex: 10, // Ensure footer is above other elements
           overflow: "visible", // Allow background image overflow to be visible

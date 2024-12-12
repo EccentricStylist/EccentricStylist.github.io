@@ -2,8 +2,10 @@ import React from "react";
 
 function AWHGame() {
   return (
-    <div className="max-w-4xl mx-auto py-12 px-6 bg-white bg-opacity-85 text-gray-900 rounded-lg shadow-lg"
-    style={{ zIndex: 2, position: "relative" }}>
+    <div
+      className="max-w-4xl mx-auto py-12 px-6 bg-white bg-opacity-85 text-gray-900 rounded-lg shadow-lg"
+      style={{ zIndex: 2, position: "relative" }}
+    >
       {/* Title */}
       <h1 className="text-6xl font-bold text-center mb-6">A Winter Haunting</h1>
 
@@ -58,25 +60,27 @@ function AWHGame() {
       </section>
 
       {/* Features */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">Game Features</h2>
-        <ul className="list-disc list-inside text-lg">
-          <li>
-            Explore the eerie Lunabelle Manor and uncover its dark secrets.
-          </li>
-          <li>
-            Solve puzzles and navigate through a dynamic, haunted environment.
-          </li>
-          <li>
-            Experience a heartwarming yet chilling narrative about love, loss,
-            and redemption.
-          </li>
-          <li>
-            Interact with unique characters, including spirits tied to the
-            manor’s history.
-          </li>
-        </ul>
-      </section>
+      <section
+  className="mb-10 p-16 text-black min-h-[500px] flex flex-col justify-center"
+  style={{
+    backgroundImage: "url('/images/AWH/awh-web-border.png')",
+    backgroundSize: "110%", // Adjust the background size
+    backgroundPosition: "center 40%",  // Adjust the vertical positioning
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "scroll",
+  }}
+>
+  <h2 className="text-2xl font-semibold mb-4">Game Features</h2>
+  <ul className="list-disc list-inside text-lg">
+    <li>Explore the eerie Lunabelle Manor and uncover its dark secrets.</li>
+    <li>Solve puzzles and navigate through a dynamic, haunted environment.</li>
+    <li>Experience a heartwarming yet chilling narrative about love, loss, and redemption.</li>
+    <li>Interact with unique characters, including spirits tied to the manor’s history.</li>
+  </ul>
+</section>
+
+
+
 
       {/* Call to Action */}
       <section className="text-center">
