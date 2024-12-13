@@ -36,7 +36,7 @@ function CharacterViewer() {
       {/* Arrows */}
       <button
         onClick={handlePrevious}
-        className="absolute top-1/2 left-8 transform -translate-y-1/2 text-white rounded-full w-14 h-14 flex items-center justify-center z-10 hover:text-blue-300 active:text-blue-300 transition-all duration-200"
+        className="absolute top-1/2 left-8 transform -translate-y-1/2 text-white rounded-full w-14 h-14 flex items-center justify-center z-10 hover:blue-300 active:blue-300 transition-all duration-200"
         aria-label="Previous Character"
       >
         <img
@@ -48,7 +48,7 @@ function CharacterViewer() {
 
       <button
         onClick={handleNext}
-        className="absolute top-1/2 right-8 transform -translate-y-1/2 text-white rounded-full w-14 h-14 flex items-center justify-center z-10 hover:text-blue-300 active:text-blue-300 transition-all duration-200"
+        className="absolute top-1/2 right-8 transform -translate-y-1/2 text-white rounded-full w-14 h-14 flex items-center justify-center z-10 hover:blue-300 active:blue-300 transition-all duration-200"
         aria-label="Next Character"
       >
         <img
