@@ -35,6 +35,7 @@ function AWinterHaunting() {
         backgroundImage: `url('/images/AWH/awh-background.png')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        position: "relative", // Ensure proper stacking context for snowfall
       }}
     >
       {/* Snowfall Layer */}
@@ -45,15 +46,17 @@ function AWinterHaunting() {
             top: 0,
             left: 0,
             width: "100%",
-            height: "100%",
-            zIndex: 0, // Above the background but below content
+            height: "auto",  // Ensure it stretches with the content
+            minHeight: "100%", // Ensure it covers the entire page
+            zIndex: 0, // Behind content but above the background
             pointerEvents: "none", // Allow interactions with content
           }}
         >
           <Snowfall
-            snowflakeCount={12}
+            snowflakeCount={50}  // Increase the number for better coverage
             images={images}
-            radius={[5, 20]} // Randomized radius range
+            radius={[5, 20]}  // Randomized radius range
+            speed={[0.5, 2]}  // Adjust the speed of the snowflakes
           />
         </div>
       )}
@@ -61,7 +64,7 @@ function AWinterHaunting() {
       {/* Sub Navigation Bar */}
       <nav
         className="bg-gray-900 text-white shadow-lg w-full"
-        style={{ zIndex: 1 }}
+        style={{ zIndex: 10 }}  // Ensure the nav is above the snowfall
       >
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-8 h-16">
@@ -86,7 +89,7 @@ function AWinterHaunting() {
       <div
         className="flex-grow"
         style={{
-          zIndex: 1,
+          zIndex: 10,  // Ensure content is above the snowfall
         }}
       >
         <div className="px-4 py-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -98,11 +101,11 @@ function AWinterHaunting() {
       <footer
         className="w-full text-center text-white py-8 flex-shrink-0"
         style={{
-          backgroundImage: `url('/images/AWH/footer-background.png')`, // Replace with your chosen footer background image
-          backgroundSize: "cover", // Ensure the background image fills the area
-          backgroundRepeat: "no-repeat", // Prevent tiling
+          backgroundImage: `url('/images/AWH/footer-background.png')`, // Footer background image
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
           minHeight: "150px", // Ensure a minimum height for the footer
-          zIndex: 10, // Ensure footer is above other elements
+          zIndex: 20,  // Ensure the footer is above other elements
           overflow: "visible", // Allow background image overflow to be visible
         }}
       >
