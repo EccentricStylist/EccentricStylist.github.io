@@ -3,8 +3,12 @@ import React from "react";
 function Press() {
   return (
     <div className="relative py-12 px-6">
+      <h1 className="text-4xl font-bold text-center mb-8 text-black">
+        Highlights and Press Kit
+      </h1>
+      {/* First Image Section */}
       <div
-        className="relative bg-cover bg-center text-white"
+        className="relative bg-cover bg-center text-white mt-5"
         style={{
           backgroundImage: `url('/images/AWH/awh-1-quote.png')`, // Use the image with text inside
           backgroundSize: "contain", // Ensure the image is fully visible and not cropped
@@ -15,7 +19,7 @@ function Press() {
           borderRadius: "10px", // Optional: rounded corners
         }}
       >
-        {/* Button centered at the bottom, but with negative bottom value */}
+        {/* Read Full Review Button */}
         <a
           href="https://indiegamereviewer.com/a-winter-haunting-review/"
           target="_blank"
@@ -26,8 +30,9 @@ function Press() {
         </a>
       </div>
 
+      {/* Second Image Section */}
       <div
-        className="relative bg-cover bg-center text-white"
+        className="relative bg-cover bg-center text-white mt-5" // Adjusted margin-top for consistency
         style={{
           backgroundImage: `url('/images/AWH/awh-2-quote.png')`, // Use the image with text inside
           backgroundSize: "contain", // Ensure the image is fully visible and not cropped
@@ -38,7 +43,7 @@ function Press() {
           borderRadius: "10px", // Optional: rounded corners
         }}
       >
-        {/* Button centered at the bottom, but with negative bottom value */}
+        {/* Read Steam Reviews Button */}
         <a
           href="https://store.steampowered.com/app/2790100/A_Winter_Haunting/#app_reviews_hash"
           target="_blank"
@@ -48,6 +53,16 @@ function Press() {
           Read Steam Reviews
         </a>
       </div>
+
+      {/* View Full Press Kit Button (Moved below the images) */}
+      <a
+        href="https://impress.games/press-kit/eccentric-stylist/a-winter-haunting"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block bg-white text-black border-2 border-black py-2 px-6 rounded-lg text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs mx-auto mt-20 flex justify-center items-center hover:bg-opacity-90 transition-all"
+      >
+        View Full Press Kit
+      </a>
     </div>
   );
 }

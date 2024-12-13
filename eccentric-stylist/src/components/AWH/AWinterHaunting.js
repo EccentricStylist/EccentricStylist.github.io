@@ -97,6 +97,44 @@ function AWinterHaunting() {
         </div>
       </div>
 
+      {/* Media Section - Only show on the media route */}
+      {location.pathname === "/games/a-winter-haunting/media" && (
+        <section className="py-12 bg-white text-center">
+          <h2 className="text-3xl font-semibold mb-6 text-black">Media</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Media 1 */}
+            <div className="bg-gray-200 p-4 rounded-lg shadow-lg">
+              <img
+                src="/images/AWH/media-image-1.jpg"
+                alt="Media Image 1"
+                className="w-full h-auto rounded-md"
+              />
+              <p className="mt-4 text-sm text-gray-700">Description of the media 1.</p>
+            </div>
+
+            {/* Media 2 */}
+            <div className="bg-gray-200 p-4 rounded-lg shadow-lg">
+              <img
+                src="/images/AWH/media-image-2.jpg"
+                alt="Media Image 2"
+                className="w-full h-auto rounded-md"
+              />
+              <p className="mt-4 text-sm text-gray-700">Description of the media 2.</p>
+            </div>
+
+            {/* Media 3 */}
+            <div className="bg-gray-200 p-4 rounded-lg shadow-lg">
+              <img
+                src="/images/AWH/media-image-3.jpg"
+                alt="Media Image 3"
+                className="w-full h-auto rounded-md"
+              />
+              <p className="mt-4 text-sm text-gray-700">Description of the media 3.</p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Footer */}
       <footer
         className="w-full text-white py-8 flex-shrink-0"
@@ -143,7 +181,7 @@ function AWinterHaunting() {
           </a>
         </div>
         <div className="flex justify-center items-center space-x-8 w-full mt-4">
-        <h3 className="text-black">© 2024 Eccentric Stylist</h3>
+          <h3 className="text-black">© 2024 Eccentric Stylist</h3>
         </div>
       </footer>
     </div>
