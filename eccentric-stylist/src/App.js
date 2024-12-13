@@ -4,13 +4,14 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
+import Press from './components/AWH/Press'
 import Games from './components/Games';
 import AWinterHaunting from './components/AWH/AWinterHaunting';
 import AWHWiki from './components/AWH/Wiki'; 
 import AWHGame from './components/AWH/Game'; 
 
 // Placeholder components for A Winter Haunting sub-pages
-const Press = () => <h2>Press Information</h2>;
+// const Press = () => <h2>Press Information</h2>;
 const Media = () => <h2>Media Gallery</h2>;
 const GameContact = () => <h2>Game-specific Contact Information</h2>;
 

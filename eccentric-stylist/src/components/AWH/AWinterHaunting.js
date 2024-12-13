@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Snowfall from "react-snowfall";
-import Press from './Press'; // Import the PressQuote component
 
 function AWinterHaunting() {
   const location = useLocation();
@@ -95,9 +94,6 @@ function AWinterHaunting() {
       >
         <div className="px-4 py-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
           <Outlet />  {/* This will render content for the active route */}
-          
-          {/* Press Quote Component */}
-          {location.pathname === "/games/a-winter-haunting/press" && <Press />}
         </div>
       </div>
 

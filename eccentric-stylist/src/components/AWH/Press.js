@@ -1,37 +1,52 @@
-import React from 'react';
+import React from "react";
 
 function Press() {
   return (
-    <div className="relative text-white py-12 px-6">
+    <div className="relative py-12 px-6">
       <div
         className="relative bg-cover bg-center text-white"
         style={{
-          backgroundImage: `url('/images/AWH/awh-web-border.png')`,
-          backgroundSize: 'contain',  // Ensures the image is scaled but not cut off
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          minHeight: '60vh',           // Adjusts height for a better fit (feel free to modify)
-          borderRadius: '10px',       // Optional: for rounded corners
+          backgroundImage: `url('/images/AWH/awh-1-quote.png')`, // Use the image with text inside
+          backgroundSize: "contain", // Ensure the image is fully visible and not cropped
+          backgroundPosition: "center", // Center the image within the container
+          backgroundRepeat: "no-repeat",
+          minHeight: "40vh", // You can adjust this value based on the image aspect ratio
+          height: "auto", // Make the height adjust to the image size
+          borderRadius: "10px", // Optional: rounded corners
         }}
       >
-        {/* Dark translucent overlay applied only inside the image */}
-        <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
+        {/* Button centered at the bottom, but with negative bottom value */}
+        <a
+          href="https://indiegamereviewer.com/a-winter-haunting-review/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute left-0 right-0 mx-auto bg-white text-black border-2 border-black py-1 px-4 rounded-lg text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs bottom-[-5px] flex justify-center items-center hover:bg-opacity-90 transition-all"
+        >
+          Read Full Review
+        </a>
+      </div>
 
-        {/* Text and button are placed inside the image container */}
-        <div className="relative z-10 text-center max-w-2xl mx-auto px-4 pt-24">  {/* Increased pt-24 to move the text down */}
-          <p className="text-lg md:text-xl italic font-semibold">
-            "A Winter Haunting is thoroughly enjoyable. I was immersed and invested in the story in a way I haven’t experienced in a long time. It’s one of those rare games where I had goosebumps when I solved the mystery and felt very emotional..." -- IndieGameReviewer
-          </p>
-
-          <a
-            href="https://indiegamereviewer.com/a-winter-haunting-review/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 bg-white text-black border-2 border-black py-2 px-6 rounded-lg hover:bg-opacity-90 transition-all"
-          >
-            Read Full Review
-          </a>
-        </div>
+      <div
+        className="relative bg-cover bg-center text-white"
+        style={{
+          backgroundImage: `url('/images/AWH/awh-2-quote.png')`, // Use the image with text inside
+          backgroundSize: "contain", // Ensure the image is fully visible and not cropped
+          backgroundPosition: "center", // Center the image within the container
+          backgroundRepeat: "no-repeat",
+          minHeight: "70vh", // You can adjust this value based on the image aspect ratio
+          height: "auto", // Make the height adjust to the image size
+          borderRadius: "10px", // Optional: rounded corners
+        }}
+      >
+        {/* Button centered at the bottom, but with negative bottom value */}
+        <a
+          href="https://store.steampowered.com/app/2790100/A_Winter_Haunting/#app_reviews_hash"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute left-0 right-0 mx-auto bg-white text-black border-2 border-black py-1 px-4 rounded-lg text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-xs bottom-5 flex justify-center items-center hover:bg-opacity-90 transition-all"
+        >
+          Read Steam Reviews
+        </a>
       </div>
     </div>
   );
