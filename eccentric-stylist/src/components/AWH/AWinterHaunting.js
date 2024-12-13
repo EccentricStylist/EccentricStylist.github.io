@@ -143,7 +143,7 @@ function AWinterHaunting() {
           </a>
         </div>
         <div className="flex justify-center items-center space-x-8 w-full mt-4">
-          <h3>© 2024 Eccentric Stylist</h3>
+        <h3 className="text-black">© 2024 Eccentric Stylist</h3>
         </div>
       </footer>
     </div>
