@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Snowfall from "react-snowfall";
+import Press from './Press'; // Import the PressQuote component
 
 function AWinterHaunting() {
   const location = useLocation();
@@ -93,13 +94,16 @@ function AWinterHaunting() {
         }}
       >
         <div className="px-4 py-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
-          <Outlet />
+          <Outlet />  {/* This will render content for the active route */}
+          
+          {/* Press Quote Component */}
+          {location.pathname === "/games/a-winter-haunting/press" && <Press />}
         </div>
       </div>
 
       {/* Footer */}
       <footer
-        className="w-full text-center text-white py-8 flex-shrink-0"
+        className="w-full text-white py-8 flex-shrink-0"
         style={{
           backgroundImage: `url('/images/AWH/footer-background.png')`, // Footer background image
           backgroundSize: "cover",
@@ -109,7 +113,39 @@ function AWinterHaunting() {
           overflow: "visible", // Allow background image overflow to be visible
         }}
       >
-        <p className="text-sm font-medium mt-2">© 2024 Eccentric Stylist</p>
+        <div className="flex justify-center items-center space-x-8 w-full">
+          {/* Copyright Text as a Link */}
+          <a
+            href="https://impress.games/press-kit/eccentric-stylist"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-black border-2 border-black py-2 px-6 rounded-lg hover:bg-opacity-90 transition-all"
+            style={{
+              backgroundImage: "url('/path-to-your-cloud-image.jpg')", // Replace with your cloud image URL
+              backgroundSize: "cover", // Ensure the image covers the entire button
+              backgroundPosition: "center", // Center the image inside the button
+              color: "black", // Ensure text remains black for visibility
+            }}
+          >
+            © 2024 Eccentric Stylist
+          </a>
+
+          {/* Press Kit Button */}
+          <a
+            href="https://impress.games/press-kit/eccentric-stylist/a-winter-haunting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-black border-2 border-black py-2 px-6 rounded-lg hover:bg-opacity-90 transition-all"
+            style={{
+              backgroundImage: "url('/path-to-your-cloud-image.jpg')", // Replace with your cloud image URL
+              backgroundSize: "cover", // Ensure the image covers the entire button
+              backgroundPosition: "center", // Center the image inside the button
+              color: "black", // Ensure text remains black for visibility
+            }}
+          >
+            Press Kit
+          </a>
+        </div>
       </footer>
     </div>
   );
