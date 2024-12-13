@@ -46,17 +46,17 @@ function AWinterHaunting() {
             top: 0,
             left: 0,
             width: "100%",
-            height: "auto",  // Ensure it stretches with the content
+            height: "auto", // Ensure it stretches with the content
             minHeight: "100%", // Ensure it covers the entire page
             zIndex: 0, // Behind content but above the background
             pointerEvents: "none", // Allow interactions with content
           }}
         >
           <Snowfall
-            snowflakeCount={25}  // Increase the number for better coverage
+            snowflakeCount={25} // Increase the number for better coverage
             images={images}
-            radius={[5, 20]}  // Randomized radius range
-            speed={[0.5, 2]}  // Adjust the speed of the snowflakes
+            radius={[5, 20]} // Randomized radius range
+            speed={[0.5, 2]} // Adjust the speed of the snowflakes
           />
         </div>
       )}
@@ -64,7 +64,7 @@ function AWinterHaunting() {
       {/* Sub Navigation Bar */}
       <nav
         className="bg-gray-900 text-white shadow-lg w-full"
-        style={{ zIndex: 10 }}  // Ensure the nav is above the snowfall
+        style={{ zIndex: 10 }} // Ensure the nav is above the snowfall
       >
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-8 h-16">
@@ -74,8 +74,8 @@ function AWinterHaunting() {
                 to={item.path}
                 className={`${
                   location.pathname === item.path
-                    ? "border-b-2 border-blue-300 text-white"  // Change active color to light blue
-                    : "text-gray-400 hover:text-blue-300"    // Change hover color to light blue
+                    ? "border-b-2 border-blue-300 text-white" // Change active color to light blue
+                    : "text-gray-400 hover:text-blue-300" // Change hover color to light blue
                 } inline-flex items-center px-1 pt-1 text-sm font-medium`}
               >
                 {item.name}
@@ -89,11 +89,11 @@ function AWinterHaunting() {
       <div
         className="flex-grow"
         style={{
-          zIndex: 10,  // Ensure content is above the snowfall
+          zIndex: 10, // Ensure content is above the snowfall
         }}
       >
         <div className="px-4 py-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
-          <Outlet />  {/* This will render content for the active route */}
+          <Outlet /> {/* This will render content for the active route */}
         </div>
       </div>
 
@@ -105,7 +105,7 @@ function AWinterHaunting() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           minHeight: "150px", // Ensure a minimum height for the footer
-          zIndex: 20,  // Ensure the footer is above other elements
+          zIndex: 20, // Ensure the footer is above other elements
           overflow: "visible", // Allow background image overflow to be visible
         }}
       >
@@ -123,7 +123,7 @@ function AWinterHaunting() {
               color: "black", // Ensure text remains black for visibility
             }}
           >
-            © 2024 Eccentric Stylist
+            Contact
           </a>
 
           {/* Press Kit Button */}
@@ -141,6 +141,9 @@ function AWinterHaunting() {
           >
             Press Kit
           </a>
+        </div>
+        <div className="flex justify-center items-center space-x-8 w-full mt-4">
+          <h3>© 2024 Eccentric Stylist</h3>
         </div>
       </footer>
     </div>
