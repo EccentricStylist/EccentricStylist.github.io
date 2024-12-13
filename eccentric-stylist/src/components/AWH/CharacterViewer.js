@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { characters } from "./Variables"; // Import the `characters` array
-import Spoiler from '../Spoiler';
+import Spoiler from "../Spoiler";
 
 function CharacterViewer() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,24 +36,25 @@ function CharacterViewer() {
       {/* Arrows */}
       <button
         onClick={handlePrevious}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white rounded-full w-12 h-12 flex items-center justify-center z-10"
+        className="absolute top-1/2 left-8 transform -translate-y-1/2 text-white rounded-full w-14 h-14 flex items-center justify-center z-10 hover:text-blue-300 active:text-blue-300 transition-all duration-200"
         aria-label="Previous Character"
       >
         <img
           src="/images/AWH/awh-arrow.png" // Image for the left arrow
           alt="Previous"
-          className="w-8 h-8" // Set a specific size for the arrow image
+          className="w-14 h-10 hover:filter hover:brightness-150 hover:saturate-150" // Adjust size and apply hover effects
         />
       </button>
+
       <button
         onClick={handleNext}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white rounded-full w-12 h-12 flex items-center justify-center z-10"
+        className="absolute top-1/2 right-8 transform -translate-y-1/2 text-white rounded-full w-14 h-14 flex items-center justify-center z-10 hover:text-blue-300 active:text-blue-300 transition-all duration-200"
         aria-label="Next Character"
       >
         <img
           src="/images/AWH/awh-arrow.png" // Image for the right arrow
           alt="Next"
-          className="w-8 h-8 transform rotate-180" // Set a specific size for the arrow image
+          className="w-14 h-10 transform rotate-180 hover:filter hover:brightness-150 hover:saturate-150" // Adjust size and apply hover effects
         />
       </button>
 
