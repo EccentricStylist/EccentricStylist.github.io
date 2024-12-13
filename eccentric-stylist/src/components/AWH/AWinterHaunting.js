@@ -53,7 +53,7 @@ function AWinterHaunting() {
           }}
         >
           <Snowfall
-            snowflakeCount={50}  // Increase the number for better coverage
+            snowflakeCount={25}  // Increase the number for better coverage
             images={images}
             radius={[5, 20]}  // Randomized radius range
             speed={[0.5, 2]}  // Adjust the speed of the snowflakes
