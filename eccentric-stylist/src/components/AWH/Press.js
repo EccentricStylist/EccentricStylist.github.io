@@ -7,18 +7,18 @@ function Press() {
         className="relative bg-cover bg-center text-white"
         style={{
           backgroundImage: `url('/images/AWH/awh-web-border.png')`,
-          backgroundSize: 'cover',  // Ensures the image fully covers the container
+          backgroundSize: 'contain',  // Ensures the image is scaled but not cut off
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '50vh',           // Control height of the image area (adjustable)
+          minHeight: '60vh',           // Adjusts height for a better fit (feel free to modify)
           borderRadius: '10px',       // Optional: for rounded corners
         }}
       >
         {/* Dark translucent overlay applied only inside the image */}
-        <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div> 
+        <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
 
         {/* Text and button are placed inside the image container */}
-        <div className="relative z-10 text-center max-w-2xl mx-auto px-4">
+        <div className="relative z-10 text-center max-w-2xl mx-auto px-4 pt-24">  {/* Increased pt-24 to move the text down */}
           <p className="text-lg md:text-xl italic font-semibold">
             "A Winter Haunting is thoroughly enjoyable. I was immersed and invested in the story in a way I haven’t experienced in a long time. It’s one of those rare games where I had goosebumps when I solved the mystery and felt very emotional..." -- IndieGameReviewer
           </p>
