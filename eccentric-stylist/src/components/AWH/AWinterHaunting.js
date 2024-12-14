@@ -35,7 +35,7 @@ function AWinterHaunting() {
         backgroundImage: `url('/images/AWH/awh-background.png')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        position: "relative", // Ensure proper stacking context for snowfall
+        position: "relative",
       }}
     >
       {/* Snowfall Layer */}
@@ -46,17 +46,17 @@ function AWinterHaunting() {
             top: 0,
             left: 0,
             width: "100%",
-            height: "auto", // Ensure it stretches with the content
-            minHeight: "100%", // Ensure it covers the entire page
-            zIndex: 0, // Behind content but above the background
-            pointerEvents: "none", // Allow interactions with content
+            height: "auto",
+            minHeight: "100%",
+            zIndex: 0,
+            pointerEvents: "none",
           }}
         >
           <Snowfall
-            snowflakeCount={25} // Increase the number for better coverage
+            snowflakeCount={25}
             images={images}
-            radius={[5, 20]} // Randomized radius range
-            speed={[0.5, 2]} // Adjust the speed of the snowflakes
+            radius={[5, 20]}
+            speed={[0.5, 2]}
           />
         </div>
       )}
@@ -64,7 +64,7 @@ function AWinterHaunting() {
       {/* Sub Navigation Bar */}
       <nav
         className="bg-gray-900 text-white shadow-lg w-full"
-        style={{ zIndex: 10 }} // Ensure the nav is above the snowfall
+        style={{ zIndex: 10 }}
       >
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-8 h-16">
@@ -74,8 +74,8 @@ function AWinterHaunting() {
                 to={item.path}
                 className={`${
                   location.pathname === item.path
-                    ? "border-b-2 border-blue-300 text-white" // Change active color to light blue
-                    : "text-gray-400 hover:text-blue-300" // Change hover color to light blue
+                    ? "border-b-2 border-blue-300 text-white"
+                    : "text-gray-400 hover:text-blue-300"
                 } inline-flex items-center px-1 pt-1 text-sm font-medium`}
               >
                 {item.name}
@@ -89,62 +89,24 @@ function AWinterHaunting() {
       <div
         className="flex-grow"
         style={{
-          zIndex: 10, // Ensure content is above the snowfall
+          zIndex: 10,
         }}
       >
         <div className="px-4 py-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
-          <Outlet /> {/* This will render content for the active route */}
+          <Outlet />
         </div>
       </div>
-
-      {/* Media Section - Only show on the media route */}
-      {location.pathname === "/games/a-winter-haunting/media" && (
-        <section className="py-12 bg-white text-center">
-          <h2 className="text-3xl font-semibold mb-6 text-black">Media</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Media 1 */}
-            <div className="bg-gray-200 p-4 rounded-lg shadow-lg">
-              <img
-                src="/images/AWH/media-image-1.jpg"
-                alt="Media Image 1"
-                className="w-full h-auto rounded-md"
-              />
-              <p className="mt-4 text-sm text-gray-700">Description of the media 1.</p>
-            </div>
-
-            {/* Media 2 */}
-            <div className="bg-gray-200 p-4 rounded-lg shadow-lg">
-              <img
-                src="/images/AWH/media-image-2.jpg"
-                alt="Media Image 2"
-                className="w-full h-auto rounded-md"
-              />
-              <p className="mt-4 text-sm text-gray-700">Description of the media 2.</p>
-            </div>
-
-            {/* Media 3 */}
-            <div className="bg-gray-200 p-4 rounded-lg shadow-lg">
-              <img
-                src="/images/AWH/media-image-3.jpg"
-                alt="Media Image 3"
-                className="w-full h-auto rounded-md"
-              />
-              <p className="mt-4 text-sm text-gray-700">Description of the media 3.</p>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Footer */}
       <footer
         className="w-full text-white py-8 flex-shrink-0"
         style={{
-          backgroundImage: `url('/images/AWH/footer-background.png')`, // Footer background image
+          backgroundImage: `url('/images/AWH/footer-background.png')`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          minHeight: "150px", // Ensure a minimum height for the footer
-          zIndex: 20, // Ensure the footer is above other elements
-          overflow: "visible", // Allow background image overflow to be visible
+          minHeight: "150px",
+          zIndex: 20,
+          overflow: "visible",
         }}
       >
         <div className="flex justify-center items-center space-x-8 w-full">
@@ -155,10 +117,10 @@ function AWinterHaunting() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-black border-2 border-black py-2 px-6 rounded-lg hover:bg-opacity-90 transition-all"
             style={{
-              backgroundImage: "url('/path-to-your-cloud-image.jpg')", // Replace with your cloud image URL
-              backgroundSize: "cover", // Ensure the image covers the entire button
-              backgroundPosition: "center", // Center the image inside the button
-              color: "black", // Ensure text remains black for visibility
+              backgroundImage: "url('/path-to-your-cloud-image.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              color: "black",
             }}
           >
             Contact
@@ -171,10 +133,10 @@ function AWinterHaunting() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-black border-2 border-black py-2 px-6 rounded-lg hover:bg-opacity-90 transition-all"
             style={{
-              backgroundImage: "url('/path-to-your-cloud-image.jpg')", // Replace with your cloud image URL
-              backgroundSize: "cover", // Ensure the image covers the entire button
-              backgroundPosition: "center", // Center the image inside the button
-              color: "black", // Ensure text remains black for visibility
+              backgroundImage: "url('/path-to-your-cloud-image.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              color: "black",
             }}
           >
             Press Kit
