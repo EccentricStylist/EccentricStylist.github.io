@@ -39,7 +39,7 @@ const AWHMedia = ({ images }) => {
           {/* Lower z-index for the gallery */}
           <img
             src={images[currentIndex]}
-            alt={`Media Image ${currentIndex + 1}`}
+            alt={`Screenshot ${currentIndex + 1}`}
             className="w-full h-auto rounded-md shadow-lg"
             style={{
               zIndex: 5,
