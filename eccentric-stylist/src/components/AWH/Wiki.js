@@ -60,8 +60,8 @@ function AWHWiki() {
         <button
           className={`text-lg font-semibold ${
             activeTab === "setting"
-              ? "text-blue-300 border-b-2 border-blue-300" // Active tab with blue color
-              : "text-gray-600 hover:text-blue-300"
+              ? "text-green-700 border-b-2 border-green-700" // Darker green for active tab
+              : "text-gray-600 hover:text-green-700"
           }`}
           onClick={() => setActiveTab("setting")}
         >
@@ -70,8 +70,8 @@ function AWHWiki() {
         <button
           className={`text-lg font-semibold ${
             activeTab === "characters"
-              ? "text-blue-300 border-b-2 border-blue-300" // Active tab with blue color
-              : "text-gray-600 hover:text-blue-300"
+              ? "text-green-700 border-b-2 border-green-700" // Darker green for active tab
+              : "text-gray-600 hover:text-green-700"
           }`}
           onClick={() => setActiveTab("characters")}
         >
@@ -80,8 +80,8 @@ function AWHWiki() {
         <button
           className={`text-lg font-semibold ${
             activeTab === "walkthrough"
-              ? "text-blue-300 border-b-2 border-blue-300" // Active tab with blue color
-              : "text-gray-600 hover:text-blue-300"
+              ? "text-green-700 border-b-2 border-green-700" // Darker green for active tab
+              : "text-gray-600 hover:text-green-700"
           }`}
           onClick={() => setActiveTab("walkthrough")}
         >
